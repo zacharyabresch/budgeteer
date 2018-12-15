@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch": "npm t -- --watchAll",
+    "t:w": "npm run test:watch",
+    "build": "webpack --mode production",
+    "serve": "webpack --mode development --watch",
+    "start": "nodemon dist/main.js"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +27,10 @@
     "nodemon": "^1.18.9",
     "prettier": "^1.15.3",
     "webpack": "^4.27.1",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "inquirer": "^6.2.1"
   }
 }
